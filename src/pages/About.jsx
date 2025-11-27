@@ -10,7 +10,7 @@ export default function About() {
       {/* GIF Animation */}
       <div className="flex justify-center mt-6">
         <img
-          src="../public/airplane.svg"
+          src="/airplane.svg"
           alt="Bird Animation"
           className="w-96 object-contain "
         />
