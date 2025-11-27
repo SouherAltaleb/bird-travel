@@ -3,10 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { destinations } from "../data/destinations";
 
 export default function DestinationDetail() {
-  const { slug } = useParams();
-  const navigate = useNavigate();
-  const item = destinations.find((d) => d.slug === slug);
-
+  const { slug } = useParams(); // Holt den URL-Wert: /destinations/:slug
+  const navigate = useNavigate(); // Für Zurück-Navigation
+  const item = destinations.find((d) => d.slug === slug); // Gesuchtes Ziel
+  // Falls kein Ziel gefunden wurde
   if (!item) {
     return (
       <div>
@@ -21,6 +21,7 @@ export default function DestinationDetail() {
     );
   }
 
+  // Wenn Ziel gefunden wurde
   return (
     <div>
       <div className="mb-6">
