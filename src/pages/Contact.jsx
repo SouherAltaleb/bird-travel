@@ -13,8 +13,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="max-w-lg  ">
-      <h1 className="text-2xl font-bold mb-4">Kontakt</h1>
+    <div className=" p-6 max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4 text-center">Kontakt</h1>
       {/* Kontaktformular */}
       <form onSubmit={onSubmit} className="space-y-4">
         {/* Name */}
@@ -40,7 +40,7 @@ export default function Contact() {
           onChange={(e) => setMessage(e.target.value)}
         />
         {/* Button */}
-        <button className="btn btn-primary w-full " type="submit">
+        <button className="btn btn-primary w-full text-white" type="submit">
           Absenden
         </button>
       </form>
