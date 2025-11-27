@@ -7,28 +7,29 @@ export default function Home() {
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
 
-  //
+  //Suchfunktion
   function onSearch(e) {
     e.preventDefault();
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(); // URL-Parameter erzeugen, Das erzeugt: ?from=Berlin&to=Paris&date=2025-01-10
     if (from) params.set("from", from);
     if (to) params.set("to", to);
     if (date) params.set("date", date);
-    navigate(`/destinations?${params.toString()}`); //?
+    navigate(`/destinations?${params.toString()}`); //Weiterleitung zur Zielseite
   }
 
   return (
+    // Layout
     <div className="p-6 max-w-2xl mx-auto ">
       <h1 className="text-3xl font-bold mb-6"> Finde deine nächste Reise</h1>
 
       <form
         onSubmit={onSearch}
-        className="rid grid-cols-1 md:grid-cols-4 gap-3 rounded-4xl"
+        className="grid grid-cols-1 md:grid-cols-4 gap-3 rounded-4xl"
       >
         {/* Herkunft */}
         <input
-          value={from}
-          onChange={(e) => setFrom(e.target.value)}
+          value={from} // zeigt den aktuellen Wert
+          onChange={(e) => setFrom(e.target.value)} //speichert jede Eingabe
           placeholder="Abreise (Stadt)"
           className="input input-bordered w-full  my-4"
         />

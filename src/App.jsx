@@ -26,7 +26,7 @@ export default function App() {
         <Route path="destinations/:slug" element={<DestinationDetails />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
-        {/* optional: 404 */}
+        {/* 404 */}
         <Route
           path="*"
           element={<div className="p-8">Seite nicht gefunden</div>}
