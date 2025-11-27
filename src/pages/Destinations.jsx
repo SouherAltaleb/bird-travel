@@ -14,8 +14,8 @@ export default function Destinations() {
   const date = q.get("date"); // Datum aus der URL
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Reiseziele</h1>
+    <div className=" p-6 max-w-6xl mx-auto  ">
+      <h1 className="text-2xl font-bold mb-4 text-center">Reiseziele</h1>
 
       {/*Zeigt die Suchfilter nur an, wenn mindestens ein Wert existiert */}
       {(from || to || date) && (

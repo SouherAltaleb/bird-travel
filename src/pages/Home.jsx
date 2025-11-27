@@ -20,7 +20,9 @@ export default function Home() {
   return (
     // Layout
     <div className="p-6 max-w-2xl mx-auto ">
-      <h1 className="text-3xl font-bold mb-6"> Finde deine nächste Reise</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">
+        Finde deine nächste Reise
+      </h1>
 
       <form
         onSubmit={onSearch}
